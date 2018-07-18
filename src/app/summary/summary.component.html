@@ -1,0 +1,11 @@
+<div>
+  <p>
+    Around 8.5 years of hands-on experience in designing, developing and testing of Java/J2EE, REST/SOAP web services and SOA,
+    Microservices applications with strong complete SDLC background seeking a “Full Stack developer” role in highly reputable
+    Software Organisations to utilize and further enhance my skills and experience in this industry.
+  </p>
+  <span class="actlikelink" (click)="toggleExecutiveSummary()">Executive Summary >></span>
+  <div class="list-group" *ngIf='showExecutiveSummary'>
+    <button class="list-group-item list-group-item-action" *ngFor="let es of executiveSummary">{{es}}</button>
+  </div>
+</div>

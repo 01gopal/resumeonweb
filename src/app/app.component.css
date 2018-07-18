@@ -1,0 +1,26 @@
+body { padding-top: 60px; }
+
+.nav-item {cursor: pointer;}
+
+.content 
+    {
+        padding: 40px;
+        font-size: 12px;
+    }
+.PageLine2V
+    {
+        width:100%;
+        background-color: red;
+        min-height: 100%;
+        height: 2px;
+    }
+
+.dropdown-menu
+{
+    margin: 0px;
+}
+
+.floatright
+{
+    float: right;
+}

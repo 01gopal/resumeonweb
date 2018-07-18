@@ -1,20 +1,89 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="container-fluid">
+  <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+      <a class="navbar-brand" href="#">{{user.name}}</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation" (click)="toggleNavbar()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" [ngClass]="{'show':isNavbarShow}" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item" [ngClass]="{'active':isSummarySelected}" (click)="navbarClicked('summary')">
+            <a class="nav-link" routerLink="summary" (click)="toggleNavbar()">Summary</a>
+          </li>
+          <li class="nav-item dropdown" [ngClass]="{'active':isTechnologiesSelected}" (click)="navbarClicked('technologies')" (clickOutside)="clickedOutside('technologies')">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Technologies
+            </a>
+            <div class="dropdown-menu" [ngClass]="{'show':technologiesShow}" aria-labelledby="navbarDropdownMenuLink">
+              <li *ngFor="let technologies of technologies" (click)="toggleNavbar()" routerLink="technologies" class="dropdown-item d-flex justify-content-between align-items-center">
+                {{technologies.name}} &nbsp;
+                <span class="badge badge-primary badge-pill">{{technologies.experience}}</span>
+              </li>
+            </div>
+          </li>
+          <li class="nav-item dropdown" [ngClass]="{'active':isExperienceSelected}" (click)="navbarClicked('experience')" (clickOutside)="clickedOutside('experience')">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Experience
+            </a>
+            <div class="dropdown-menu" [ngClass]="{'show':expToggle}" aria-labelledby="navbarDropdownMenuLink">
+              <li *ngFor="let exp of experiences" (click)="toggleNavbar()" routerLink="experience" class="dropdown-item d-flex justify-content-between align-items-center">
+                {{exp.shortName}} &nbsp;
+                <span class="badge badge-primary badge-pill">{{exp.location}}</span>
+              </li>
+            </div>
+          </li>
+          <li class="nav-item dropdown" [ngClass]="{'active':isProjectSelected}" (click)="navbarClicked('project')" (clickOutside)="clickedOutside('project')">
+            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Projects
+            </a>
+            <div class="dropdown-menu" [ngClass]="{'show':projToggle}" aria-labelledby="navbarDropdownMenuLink">
+              <ng-container *ngFor="let exp of experiences">
+                <li *ngFor="let proj of exp.projects" (click)="toggleNavbar()" routerLink="project" class="dropdown-item d-flex justify-content-between align-items-center">
+                  {{proj.short}} - {{proj.name}} &nbsp;
+                  <span class="badge badge-primary badge-pill">{{exp.shortName}}</span>
+                </li>
+              </ng-container>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 
+  <body>
+    <div class="row">
+      <div class="col-sm-10 col-md-10 col-lg-10 col-xl-10 bg-light">
+        <div class="row">
+          <div class="col-md-12 PageLine2V"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-2 bg-warning"></div>
+          <div class="col-md-10 content">
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2">
+        <table class="">
+          <tr>
+            <td>
+              <button>LinkedIn</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button>GitHub</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button>Gmail</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</div>
