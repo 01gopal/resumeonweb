@@ -2,7 +2,7 @@
   <div class="row bg-dark border border-rounded">
     <div class="col-sm-3 nopadding">
       <a href="#">
-        <img class="border border-white rounded-circle" width="140px" height="150px" [src]="user?.img"/>
+        <img class="border border-white rounded-circle" width="140px" height="150px" [src]="user?.img" />
       </a>
     </div>
     <div class="col-sm-9 wrapper">
@@ -19,7 +19,7 @@
         <p>
           {{user?.summary.short}}
           <span class="actlikelink" (click)="toggleExecutiveSummary()" data-toggle="collapse" data-target="#executiveSummary" aria-controls="executiveSummary"
-          [attr.aria-expanded]="showExecutiveSummary" aria-label="Toggle Summary"> {{showDetaiText}}... </span>
+            [attr.aria-expanded]="showExecutiveSummary" aria-label="Toggle Summary"> {{showDetaiText}}... </span>
         </p>
       </div>
     </div>
@@ -33,10 +33,53 @@
     <div class="col-sm-12">
       <a routerLink="/technologies">Technologies</a>
     </div>
+    <div class="col-sm-12">
+      <div class="row">
+        <div class="col-sm-6">
+          Tech Graph!!
+        </div>
+        <div class="col-sm-6">
+          <div class="row">
+            <table class="table table-hover">
+              <ng-container *ngFor="let tech of technologies; let i = index">
+                <ng-container *ngIf="i % 3 == 0">
+                <tr>
+                  <td>
+                      {{technologies[i].name}}
+                  </td>
+                  <td>
+                      {{technologies[i + 1].name}}
+                  </td>
+                  <td>
+                      {{technologies[i + 2].name}}
+                  </td>
+                </tr>
+                <tr>
+                  <td [routerLink]="['/technologies', technologies[i].name]">
+                      <img *ngFor="let subtech of technologies[i].subtech" [src]="subtech.src" width="20px" height="20px" />
+                  </td>
+                  <td *ngIf="technologies[i+1]" [routerLink]="['/technologies', technologies[i+1].name]">
+                      <img *ngFor="let subtech of technologies[i+1].subtech" [src]="subtech.src" width="20px" height="20px" />
+                  </td>
+                  <td *ngIf="technologies[i+2]" [routerLink]="['/technologies', technologies[i+2].name]">
+                      <img *ngFor="let subtech of technologies[i+2].subtech" [src]="subtech.src" width="20px" height="20px" />
+                  </td>
+                </tr>
+
+              </ng-container>
+              </ng-container>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="row border">
     <div class="col-sm-12">
       <a routerLink="/experience">Experience</a>
+    </div>
+    <div class="col-sm-6" *ngFor="let exp of experiences">
+      <img [src]="exp.src" width="20px" height="20px" />
     </div>
   </div>
   <div class="row">

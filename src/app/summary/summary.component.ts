@@ -10,6 +10,8 @@ import { ResumeDataService } from '../services/resume-data.service';
 export class SummaryComponent implements OnInit {
 
   user: any;
+  technologies: any[];
+  experiences: any[];
   showExecutiveSummary: boolean = false;
   showDetaiText: string = "more";
   showVideo: boolean = false;
@@ -23,6 +25,8 @@ export class SummaryComponent implements OnInit {
   ngOnInit() {
     this.dataService.getUserData().subscribe(data => {
       this.user = data.user;
+      this.technologies = data.technologies;
+      this.experiences = data.experiences;
     }, error => console.log(error));
   }
 
