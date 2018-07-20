@@ -1,0 +1,15 @@
+#header {
+    position: absolute;
+  bottom: 0;
+  left: 0;
+  }
+
+  .wrapper {
+    display : flex;
+    align-items : flex-end;
+    padding-left: 0%;
+  }
+
+h6 {
+    font-size: 0.8rem;
+  }

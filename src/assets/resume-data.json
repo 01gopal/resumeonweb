@@ -1,0 +1,605 @@
+{
+	"user": {
+		"name": "Gopal Sharma",
+		"initials": "GS",
+		"title": "Full Stack Developer",
+		"location": "Melbourne - Australia",
+		"email": "01gopal@gmail.com",
+		"phone": "0451046283",
+		"address": "8 Tanino Rd, Cranbourne West, Victoria - 3977",
+		"visa": "Permanent Residency - 189 Working Visa",
+		"img": "../../assets/images/profile/Gopal-ProfilePic.jpg",
+		"summary": {
+			"short": "Around 8.5 years of hands-on experience in designing, developing and testing of Java/J2EE, REST/SOAP web services and SOA, Microservices applications with strong complete SDLC background seeking a \"Full Stack Developer\" role in highly reputable Software Organisations to utilize and further enhance my skills and experience in this industry.",
+			"detail": [
+				"Strong experience in JDK 1.6/1.7/1.8 - Framework design with Generics & Thread Programming.",
+				"Strong experience in developing MicroServices architecture using SpringBoot 1.5.",
+				"Strong experience in Finance domain with multithreaded J2EE applications.",
+				"Strong experience in Spring IOC/MVC, Spring-batch and Spring-data.",
+				"Strong experience in SOA based application development.",
+				"Strong experience with repository services like Git, BitBucket(jira/confluence), SVN & Clearcase.",
+				"Good experience in creating builds piplines / chains using Teamcity/Jenkins.",
+				"Good experience in building web services using REST and SOAP.",
+				"Good experience in UI development with AngularJS, JS, CSS, HTML and JavaFX.",
+				"Good experience on mapping framework Hibernate 3.0",
+				"Good experience in Oracle (10g/11g) PL/SQL programming and no-sql db (Mongo-dB)",
+				"Good experience of Design Pattern (Circuit Breaker, Singleton, Factory, Observer, Builder, Visitor etc.)",
+				"Well versed in Junit testing framework using Mockito, PowerMock and WireMockService.",
+				"Well versed in log4j and logback logging.",
+				"Well versed with Agile Methodology and Scrum implementation of Software development.",
+				"Hands on experience on IDE like Eclipse and IntelliJ IDEA development tool.",
+				"Ability to quickly master new software tools and applies its full range of capabilities",
+				"Good interpersonal and communication skills."
+			]
+		}
+	},
+	"technologies": [
+		{
+			"name": "Backend-Java",
+			"experience": "8.5 Years",
+			"subtech": [
+				{
+					"techname": "Java 8",
+					"level": "Expert",
+					"experience": "4 Years",
+					"src": "assets/images/tech/java8.png"
+				},
+				{
+					"techname": "Java 1.6",
+					"level": "Expert",
+					"experience": "5 Years",
+					"src": "assets/images/tech/java.png"
+				},
+				{
+					"techname": "JDBC",
+					"level": "Expert",
+					"experience": "6 Years",
+					"src": "assets/images/tech/jdbc.jpeg"
+				},
+				{
+					"techname": "JMS",
+					"level": "Expert",
+					"experience": "6 Years",
+					"src": "assets/images/tech/jms.png"
+				},
+				{
+					"techname": "Java 10",
+					"level": "Advanced",
+					"experience": "1 Year",
+					"src": "assets/images/tech/java-duke.png"
+				}
+			]
+		},
+		{
+			"name": "Frontend-JS",
+			"experience": "3 Years",
+			"subtech": [
+				{
+					"techname": "Angular 2/4",
+					"level": "Advanced",
+					"experience": "1 Year",
+					"src": "assets/images/tech/java.png"
+				},
+				{
+					"techname": "Angular JS",
+					"level": "Expert",
+					"experience": "2 Years",
+					"src": "assets/images/tech/java.png"
+				},
+				{
+					"techname": "React JS",
+					"level": "Beginner",
+					"experience": "6 Months",
+					"src": "assets/images/tech/java.png"
+				},
+				{
+					"techname": "Node JS",
+					"level": "Beginner",
+					"experience": "6 Months",
+					"src": "assets/images/tech/java.png"
+				}
+			]
+		},
+		{
+			"name": "Spring",
+			"experience": "6 Years",
+			"subtech": [
+				{
+					"techname": "Spring-IOC",
+					"level": "Expert",
+					"experience": "6 Years",
+					"src": "assets/images/tech/java.png"
+				},
+				{
+					"techname": "Spring-BOOT",
+					"level": "Expert",
+					"experience": "4 Years",
+					"src": "assets/images/tech/java.png"
+				},
+				{
+					"techname": "Spring-MVC",
+					"level": "Expert",
+					"experience": "3 Years",
+					"src": "assets/images/tech/java.png"
+				},
+				{
+					"techname": "Spring-BATCH",
+					"level": "Advanced",
+					"experience": "2 Years",
+					"src": "assets/images/tech/java.png"
+				}
+			]
+		},
+		{
+			"name": "ORM",
+			"experience": "6 Years",
+			"subtech": [
+				{
+					"techname": "JPA",
+					"level": "Expert",
+					"experience": "5 Years",
+					"src": "assets/images/tech/java.png"
+				},
+				{
+					"techname": "Hibernate",
+					"level": "Advanced",
+					"experience": "5 Years",
+					"src": "assets/images/tech/java.png"
+				},
+				{
+					"techname": "Spring-DATA",
+					"level": "Advanced",
+					"experience": "2 Years",
+					"src": "assets/images/tech/java.png"
+				}
+			]
+		},
+		{
+			"name": "Architecture",
+			"experience": "5.5 Years",
+			"subtech": [
+				{
+					"techname": "Microservices",
+					"level": "Advanced",
+					"experience": "3 Year",
+					"src": "assets/images/tech/java.png"
+				},
+				{
+					"techname": "SOA",
+					"level": "Advanced",
+					"experience": "2.5 Years",
+					"src": "assets/images/tech/java.png"
+				}
+			]
+		},
+		{
+			"name": "CI / CD",
+			"experience": "4 Years",
+			"subtech": [
+				{
+					"techname": "Jenkins",
+					"level": "Advanced",
+					"experience": "2 Years",
+					"src": "assets/images/tech/java.png"
+				},
+				{
+					"techname": "Teamcity",
+					"level": "Advanced",
+					"experience": "2 Years",
+					"src": "assets/images/tech/java.png"
+				},
+				{
+					"techname": "Bamboo",
+					"level": "Intermediate",
+					"experience": "2 Months",
+					"src": "assets/images/tech/java.png"
+				}
+			]
+		},
+		{
+			"name": "Database",
+			"experience": "6 Years",
+			"subtech": [
+				{
+					"techname": "Oracle PL/SQL",
+					"level": "Advanced",
+					"experience": "5 Years",
+					"src": "assets/images/tech/java.png"
+				},
+				{
+					"techname": "MongoDB",
+					"level": "Intermediate",
+					"experience": "2 Years",
+					"src": "assets/images/tech/java.png"
+				},
+				{
+					"techname": "MySql",
+					"level": "Intermediate",
+					"experience": "2 Years",
+					"src": "assets/images/tech/java.png"
+				}
+			]
+		},
+		{
+			"name": "Servers",
+			"experience": "5 Years",
+			"subtech": [
+				{
+					"techname": "Tomcat",
+					"level": "Advanced",
+					"experience": "4 Years",
+					"src": "assets/images/tech/java.png"
+				},
+				{
+					"techname": "JBoss",
+					"level": "Intermediate",
+					"experience": "2 Years",
+					"src": "assets/images/tech/java.png"
+				},
+				{
+					"techname": "Nginx",
+					"level": "Intermediate",
+					"experience": "6 Months",
+					"src": "assets/images/tech/java.png"
+				}
+			]
+		},
+		{
+			"name": "Repositories",
+			"experience": "8 Years",
+			"subtech": [
+				{
+					"techname": "GIT",
+					"level": "Expert",
+					"experience": "2.5 Years",
+					"src": "assets/images/tech/java.png"
+				},
+				{
+					"techname": "SVN",
+					"level": "Advanced",
+					"experience": "2 Years",
+					"src": "assets/images/tech/java.png"
+				},
+				{
+					"techname": "Clearcase",
+					"level": "Intermediate",
+					"experience": "2 Years",
+					"src": "assets/images/tech/java.png"
+				}
+			]
+		},
+		{
+			"name": "Testing",
+			"experience": "8 Years",
+			"subtech": [
+				{
+					"techname": "Junit",
+					"level": "Expert",
+					"experience": "5.5 Years",
+					"src": "assets/images/tech/java.png"
+				},
+				{
+					"techname": "TestNG",
+					"level": "Advanced",
+					"experience": "6 Months",
+					"src": "assets/images/tech/java.png"
+				},
+				{
+					"techname": "Powermock",
+					"level": "Intermediate",
+					"experience": "2 Years",
+					"src": "assets/images/tech/java.png"
+				},
+				{
+					"techname": "EasyMock",
+					"level": "Intermediate",
+					"experience": "3 Years",
+					"src": "assets/images/tech/java.png"
+				},
+				{
+					"techname": "WireMock",
+					"level": "Bigenner",
+					"experience": "2 Months",
+					"src": "assets/images/tech/java.png"
+				}
+			]
+		},
+		{
+			"name": "Build tools",
+			"experience": "7 Years",
+			"subtech": [
+				{
+					"techname": "Maven",
+					"level": "Expert",
+					"experience": "6 Years",
+					"src": "assets/images/tech/java.png"
+				},
+				{
+					"techname": "Ant/Ivy",
+					"level": "Advanced",
+					"experience": "2 Years",
+					"src": "assets/images/tech/java.png"
+				},
+				{
+					"techname": "Gradle",
+					"level": "Intermediate",
+					"experience": "2 Months",
+					"src": "assets/images/tech/java.png"
+				}
+			]
+		},
+		{
+			"name": "More tools",
+			"experience": "...",
+			"subtech": [
+				{
+					"techname": "Eclipse",
+					"level": "Expert",
+					"experience": "8 Years",
+					"src": "assets/images/tech/java.png"
+				},
+				{
+					"techname": "InteliJ IDEA",
+					"level": "Intermediate",
+					"experience": "2 Years",
+					"src": "assets/images/tech/java.png"
+				},
+				{
+					"techname": "JIRA",
+					"level": "Advanced",
+					"experience": "6 Years",
+					"src": "assets/images/tech/java.png"
+				},
+				{
+					"techname": "Confluence",
+					"level": "Advanced",
+					"experience": "6 Years",
+					"src": "assets/images/tech/java.png"
+				},
+				{
+					"techname": "Crucible",
+					"level": "Advanced",
+					"experience": "4 Years",
+					"src": "assets/images/tech/java.png"
+				},
+				{
+					"techname": "Sonar",
+					"level": "Advanced",
+					"experience": "4 Years",
+					"src": "assets/images/tech/java.png"
+				},
+				{
+					"techname": "BitBucket",
+					"level": "Intermediate",
+					"experience": "2 Years",
+					"src": "assets/images/tech/java.png"
+				},
+				{
+					"techname": "Jacoco",
+					"level": "Intermediate",
+					"experience": "1 Year",
+					"src": "assets/images/tech/java.png"
+				}
+			]
+		}
+	],
+	"more": {
+		"education": [
+			{
+				"institute": "IP University",
+				"location": "Delhi, India",
+				"address": "Bharti Vidyapeeth's College of Engineering, Delhi, India",
+				"name": "Bachelor of Technology",
+				"class": "Information Technology",
+				"score": "75%",
+				"start": "Apr 2005",
+				"end": "Mar 2009"
+			},
+			{
+				"institute": "AISSCE",
+				"location": "Delhi, India",
+				"address": "Central Board of Secondary Education",
+				"name": "12th",
+				"class": "",
+				"score": "79%",
+				"start": "Apr 2003",
+				"end": "Mar 2004"
+			},
+			{
+				"institute": "AISSCE",
+				"location": "Delhi, India",
+				"address": "Central Board of Secondary Education",
+				"name": "10th",
+				"class": "",
+				"score": "78%",
+				"start": "Apr 2001",
+				"end": "Mar 2002"
+			}
+		],
+		"achivements": [
+			{
+				"name": "Star of the Month Award – The Royal Bank of Scotland",
+				"description": ""
+			},
+			{
+				"name": "SNAP Award - Individual excellence – Aricent Technologies",
+				"description": ""
+			},
+			{
+				"name": "Collapsed thousands of Autosys jobs into a single triggering master job – The Royal Bank of Scotland",
+				"description": ""
+			}
+		],
+		"methadologies": [
+			{
+				"name": "Agile",
+				"description": ""
+			},
+			{
+				"name": "12 Tech Methadology",
+				"description": ""
+			},
+			{
+				"name": "S.O.L.I.D. Design Principles",
+				"description": ""
+			},
+			{
+				"name": "Low Coupling, High Cohesion",
+				"description": ""
+			}
+		],
+		"books": [
+			{
+				"name": "Java Concurrency in Practice",
+				"author": "",
+				"src": ""
+			},
+			{
+				"name": "Working in JAVA",
+				"author": "",
+				"src": ""
+			},
+			{
+				"name": "Head First - Core Java",
+				"author": "",
+				"src": ""
+			}
+		]
+	},
+	"experiences": [
+		{
+			"company": "Cognizant Technology Solution",
+			"shortName": "Cognizant",
+			"location": "Melbourne, Australia",
+			"address": "15 William St, Melbourne, Victoria - 3000",
+			"src": "",
+			"start": "2 July 2018",
+			"end": "",
+			"description": "",
+			"projects": []
+		},
+		{
+			"company": "Sydac",
+			"shortName": "Sydac",
+			"location": "Adelaide, Australia",
+			"address": "153 Wakefield St, Adelaide, South Australia - 5000",
+			"src": "",
+			"start": "10 Jan 2018",
+			"end": "28 Jun 2018",
+			"description": "",
+			"projects": [
+				{
+					"name": "Freight Sim Simulator",
+					"short": "FSS",
+					"start": "",
+					"end": "",
+					"technologies": [
+						"",
+						""
+					],
+					"description": ""
+				}
+			]
+		},
+		{
+			"company": "The Royal Bank of Scotland",
+			"shortName": "RBS",
+			"location": "Gurugram, India",
+			"address": "Infospace, Sector - 21, Gurugram, Haryana, India",
+			"src": "",
+			"start": "01 Sep 2014",
+			"end": "28 Dec 2017",
+			"description": "",
+			"projects": [
+				{
+					"name": "Ignite Batch Orchestrator",
+					"short": "IBO",
+					"start": "",
+					"end": "",
+					"technologies": [
+						"",
+						""
+					],
+					"description": ""
+				},
+				{
+					"name": "Feeds Manager - Revamp",
+					"short": "FMR",
+					"start": "",
+					"end": "",
+					"technologies": [
+						"",
+						""
+					],
+					"description": ""
+				},
+				{
+					"name": "Fx Rates",
+					"short": "FxR",
+					"start": "",
+					"end": "",
+					"technologies": [
+						"",
+						""
+					],
+					"description": ""
+				}
+			]
+		},
+		{
+			"company": "Aricent Technologies",
+			"shortName": "Aricent",
+			"location": "Gurugram, India",
+			"address": "Infotech, Sector - 21, Gurugram, Haryana, India",
+			"src": "",
+			"start": "16 Nov 2009",
+			"end": "29 Aug 2014",
+			"description": "",
+			"projects": [
+				{
+					"name": "Smart Metering Management",
+					"short": "SMM",
+					"start": "",
+					"end": "",
+					"technologies": [
+						"",
+						""
+					],
+					"description": "Copernicuslaan 50 2018 Antwerp, Belgium"
+				}
+			]
+		}
+	],
+	"contacts": [
+		{
+			"name": "LinkedIn",
+			"src": "",
+			"url": ""
+		},
+		{
+			"name": "GitHub",
+			"src": "",
+			"url": ""
+		},
+		{
+			"name": "skype",
+			"src": "",
+			"url": ""
+		},
+		{
+			"name": "Gmail",
+			"src": "",
+			"url": ""
+		},
+		{
+			"name": "Twitter",
+			"src": "",
+			"url": ""
+		},
+		{
+			"name": "Facebook",
+			"src": "",
+			"url": ""
+		}
+	]
+}

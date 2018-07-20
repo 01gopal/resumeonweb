@@ -1,3 +1,26 @@
-<p>
-  experience works!
-</p>
+<div class="row">
+    <div class="col-sm-10">
+        <h1>Organisations</h1>
+    </div>
+    <div class="col-sm-2">
+            <h2> + </h2>
+    </div>
+    <div class="row">
+        <table class="table table-stripped" *ngFor="let exp of experiences">
+            <tr class="thead-dark">
+                <th>{{exp.shortName}} - {{exp.company}}</th>
+            </tr>
+            <tr>
+                <table class="table table-hover">
+                    <tr scope="row">
+                        <td>{{exp.location}}</td>
+                        <td>{{exp.address}}</td>
+                        <td>{{exp.start}}</td>
+                        <td>{{exp.end}}</td>
+                        <td>{{exp.description}}</td>
+                    </tr>
+                </table>
+            </tr>
+        </table>
+    </div>
+</div>

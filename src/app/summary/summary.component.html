@@ -1,11 +1,52 @@
 <div>
-  <p>
-    Around 8.5 years of hands-on experience in designing, developing and testing of Java/J2EE, REST/SOAP web services and SOA,
-    Microservices applications with strong complete SDLC background seeking a “Full Stack developer” role in highly reputable
-    Software Organisations to utilize and further enhance my skills and experience in this industry.
-  </p>
-  <span class="actlikelink" (click)="toggleExecutiveSummary()">Executive Summary >></span>
-  <div class="list-group" *ngIf='showExecutiveSummary'>
-    <button class="list-group-item list-group-item-action" *ngFor="let es of executiveSummary">{{es}}</button>
+  <div class="row bg-dark border border-rounded">
+    <div class="col-sm-3 nopadding">
+      <a href="#">
+        <img class="border border-white rounded-circle" width="140px" height="150px" [src]="user?.img"/>
+      </a>
+    </div>
+    <div class="col-sm-9 wrapper">
+      <span id="information" class="text-white">
+        <h1>{{user?.name}}</h1>
+        <h5>{{user?.title}}, {{user?.location}}</h5>
+        <h6>{{user?.phone}}, {{user?.email}}</h6>
+      </span>
+    </div>
+  </div>
+  <div class="row border">
+    <div class="row">
+      <div class="col-sm-12">
+        <p>
+          {{user?.summary.short}}
+          <span class="actlikelink" (click)="toggleExecutiveSummary()" data-toggle="collapse" data-target="#executiveSummary" aria-controls="executiveSummary"
+          [attr.aria-expanded]="showExecutiveSummary" aria-label="Toggle Summary"> {{showDetaiText}}... </span>
+        </p>
+      </div>
+    </div>
+    <div id="executiveSummary" class="row list-group collapse" [ngClass]="{'show':showExecutiveSummary}" [attr.aria-expanded]="showExecutiveSummary">
+      <div class="col-sm-12">
+        <button class="list-group-item list-group-item-action" *ngFor="let d of user?.summary.detail">{{d}}</button>
+      </div>
+    </div>
+  </div>
+  <div class="row border">
+    <div class="col-sm-12">
+      <a routerLink="/technologies">Technologies</a>
+    </div>
+  </div>
+  <div class="row border">
+    <div class="col-sm-12">
+      <a routerLink="/experience">Experience</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <span class="actlikelink" (click)="toggleShowVideo()">Enough text!! Show me a video >></span>
+    </div>
+  </div>
+  <div class="row" *ngIf='showVideo'>
+    <div class="col-sm-12">
+      <iframe width="420" height="315" [src]='safeURL' frameborder="0" allowfullscreen></iframe>
+    </div>
   </div>
 </div>

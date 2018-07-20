@@ -1,3 +1,46 @@
-<p>
-  technologies works!
-</p>
+<div class="row">
+    <div class="col-sm-11 col-md-11">
+        <h1>Technologies</h1>
+    </div>
+    <div class="col-sm-1 col-md-1">
+        <h2 class="actlikelink" (click)='toggleExpandAll()'> {{expandText}} </h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <mat-expansion-panel *ngFor="let tech of technologies" [expanded]='expandAll || selection == tech.name'>
+            <mat-expansion-panel-header class="title">
+                <mat-panel-title>
+                    {{tech.name}}
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div>
+                <div *ngFor="let subtech of tech.subtech; let i = index">
+                    <div *ngIf="i % 2 == 0" class="row">
+                        <div class="col-xs-6 col-sm-6">
+                            <div class="row border data">
+                                <div class="col-xs-9 col-sm-3">
+                                    <img [src]='tech.subtech[i]?.src' height="50px" width="50px" />
+                                </div>
+                                <div class="col-xs-1 col-sm-3">{{tech.subtech[i]?.techname}}</div>
+                                <div class="col-xs-1 col-sm-3">{{tech.subtech[i]?.level}}</div>
+                                <div class="col-xs-1 col-sm-3">{{tech.subtech[i]?.experience}}</div>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6">
+                            <div *ngIf="tech.subtech[i + 1]" class="row border data">
+                                <div class="col-xs-9 col-sm-3">
+                                    <img [src]='tech.subtech[i + 1]?.src' height="50px" width="50px" />
+                                </div>
+                                <div class="col-xs-1 col-sm-3">{{tech.subtech[i + 1]?.techname}}</div>
+                                <div class="col-xs-1 col-sm-3">{{tech.subtech[i + 1]?.level}}</div>
+                                <div class="col-xs-1 col-sm-3">{{tech.subtech[i + 1]?.experience}}</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </mat-expansion-panel>
+    </div>
+</div>

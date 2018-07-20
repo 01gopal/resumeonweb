@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ResumeDataService } from '../services/resume-data.service';
 
 @Component({
   selector: 'app-project',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./project.component.css']
 })
 export class ProjectComponent implements OnInit {
-
-  constructor() { }
+  experiences: any[];
+  constructor(private dataService: ResumeDataService) { }
 
   ngOnInit() {
+    this.dataService.getUserData().subscribe(data => {
+      this.experiences = data.experiences;
+    }, error => console.log(error));
   }
 
 }

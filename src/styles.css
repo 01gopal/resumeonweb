@@ -2,5 +2,35 @@
 
 .actlikelink {
     cursor: pointer;
-    color:blue;
+    color:#007bff;
+}
+
+.title {
+    color:#007bff;
+    font-size: 20px;
+}
+
+.mat-expansion-indicator::after {
+  color: grey;
+}
+
+.data{
+    text-align: center;
+    margin: 0px;
+    padding: 2px;
+}
+
+.nopadding {
+    padding: 0px !important;
+}
+
+.border {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+img.border {
+    padding: 1px;
+    margin: 0px;
 }
