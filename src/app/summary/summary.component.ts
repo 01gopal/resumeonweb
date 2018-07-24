@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ResumeDataService } from '../services/resume-data.service';
+import { moment } from '../../../node_modules/ngx-bootstrap/chronos/test/chain';
+import { SecondsToTimePipe } from '../pipe/seconds-to-time.pipe';
 
 @Component({
   selector: 'app-summary',
@@ -16,11 +18,13 @@ export class SummaryComponent implements OnInit {
   showDetaiText: string = "more";
   showVideo: boolean = false;
   executiveSummary: string[];
+  dateFormat: string = "d MMM, y";
   videoURL: string = "https://www.youtube.com/embed/wR3giskE8vk";
   safeURL: any;
-  constructor(private _sanitizer: DomSanitizer, private dataService: ResumeDataService){
+
+  constructor(private _sanitizer: DomSanitizer, private dataService: ResumeDataService) {
     this.safeURL = this._sanitizer.bypassSecurityTrustResourceUrl(this.videoURL);
- }
+  }
 
   ngOnInit() {
     this.dataService.getUserData().subscribe(data => {
@@ -41,5 +45,25 @@ export class SummaryComponent implements OnInit {
 
   toggleShowVideo(): void {
     this.showVideo = !this.showVideo;
+  }
+
+  calculationDuration(start: string, end: string): number {
+    var startDate = moment(start, 'DD-MM-YYYY');
+    var endDate = moment();
+    if (end != null && end.length > 0) {
+      endDate = moment(end, 'DD-MM-YYYY');
+    }
+    if (endDate > startDate) {
+      return endDate.diff(startDate, "seconds");
+    }
+    return 0;
+  }
+
+  toDate(date: string): any {
+    return moment(date, 'DD-MM-YYYY');
+  }
+
+  secondsToMonths(secs: number): number {
+    return Math.floor(secs / 60);
   }
 }

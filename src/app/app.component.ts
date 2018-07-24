@@ -18,7 +18,8 @@ export class AppComponent {
   projToggle: boolean;
   isNavbarShow: boolean;
 
-  showContacts: boolean;
+  contactHideShowText: string = "-";
+  showContacts: boolean = true;
 
   isSummarySelected: boolean = true;
   isTechnologiesSelected: boolean;
@@ -99,5 +100,10 @@ export class AppComponent {
 
   toggleShowContacts(): void{
     this.showContacts = !this.showContacts;
+    if (this.showContacts) {
+      this.contactHideShowText = "-";
+    } else {
+      this.contactHideShowText = "+";
+    }
   }
 }

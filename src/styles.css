@@ -34,3 +34,8 @@ img.border {
     padding: 1px;
     margin: 0px;
 }
+
+.detail {
+    font-size: 10px;
+    color: grey;
+}

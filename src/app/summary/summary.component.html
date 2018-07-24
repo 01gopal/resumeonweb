@@ -14,59 +14,69 @@
     </div>
   </div>
   <div class="row border">
-    <div class="row">
-      <div class="col-sm-12">
-        <p>
-          {{user?.summary.short}}
-          <span class="actlikelink" (click)="toggleExecutiveSummary()" data-toggle="collapse" data-target="#executiveSummary" aria-controls="executiveSummary"
-            [attr.aria-expanded]="showExecutiveSummary" aria-label="Toggle Summary"> {{showDetaiText}}... </span>
-        </p>
+    <div class="col-sm-12">
+      <p>
+        {{user?.summary.short}}
+      </p>
+      <div id="executiveSummary" class="row list-group collapse" [ngClass]="{'show':showExecutiveSummary}" [attr.aria-expanded]="showExecutiveSummary">
+        <div class="col-sm-12">
+          <button class="list-group-item list-group-item-action" *ngFor="let d of user?.summary.detail">{{d}}</button>
+        </div>
       </div>
-    </div>
-    <div id="executiveSummary" class="row list-group collapse" [ngClass]="{'show':showExecutiveSummary}" [attr.aria-expanded]="showExecutiveSummary">
-      <div class="col-sm-12">
-        <button class="list-group-item list-group-item-action" *ngFor="let d of user?.summary.detail">{{d}}</button>
-      </div>
+      <span class="actlikelink" (click)="toggleExecutiveSummary()" data-toggle="collapse" data-target="#executiveSummary" aria-controls="executiveSummary"
+        [attr.aria-expanded]="showExecutiveSummary" aria-label="Toggle Summary"> {{showDetaiText}}... </span>
     </div>
   </div>
   <div class="row border">
     <div class="col-sm-12">
-      <a routerLink="/technologies">Technologies</a>
+      <a routerLink="/technologies">
+        <h5>Technologies</h5>
+      </a>
     </div>
     <div class="col-sm-12">
       <div class="row">
-        <div class="col-sm-6">
+        <!--div class="col-sm-6">
           Tech Graph!!
-        </div>
-        <div class="col-sm-6">
+          <app-pie-chart [data]="Hello"></app-pie-chart>
+        </div-->
+        <div class="col-sm-12">
           <div class="row">
-            <table class="table table-hover">
+            <table class="table table-striped">
               <ng-container *ngFor="let tech of technologies; let i = index">
-                <ng-container *ngIf="i % 3 == 0">
-                <tr>
-                  <td>
+                <ng-container *ngIf="i % 4 == 0">
+                  <tr>
+                    <td class="border">
                       {{technologies[i].name}}
-                  </td>
-                  <td>
+                    </td>
+                    <td class="border">
                       {{technologies[i + 1].name}}
-                  </td>
-                  <td>
+                    </td>
+                    <td class="border">
                       {{technologies[i + 2].name}}
-                  </td>
-                </tr>
-                <tr>
-                  <td [routerLink]="['/technologies', technologies[i].name]">
-                      <img *ngFor="let subtech of technologies[i].subtech" [src]="subtech.src" width="20px" height="20px" />
-                  </td>
-                  <td *ngIf="technologies[i+1]" [routerLink]="['/technologies', technologies[i+1].name]">
-                      <img *ngFor="let subtech of technologies[i+1].subtech" [src]="subtech.src" width="20px" height="20px" />
-                  </td>
-                  <td *ngIf="technologies[i+2]" [routerLink]="['/technologies', technologies[i+2].name]">
-                      <img *ngFor="let subtech of technologies[i+2].subtech" [src]="subtech.src" width="20px" height="20px" />
-                  </td>
-                </tr>
-
-              </ng-container>
+                    </td>
+                    <td class="border">
+                      {{technologies[i + 3].name}}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td [routerLink]="['/technologies', technologies[i].name]">
+                      <img *ngFor="let subtech of technologies[i].subtech" class="border rounded-circle" [src]="subtech.src" width="20px" height="20px"
+                      />
+                    </td>
+                    <td *ngIf="technologies[i+1]" [routerLink]="['/technologies', technologies[i+1].name]">
+                      <img *ngFor="let subtech of technologies[i+1].subtech" class="border rounded-circle" [src]="subtech.src" width="20px" height="20px"
+                      />
+                    </td>
+                    <td *ngIf="technologies[i+2]" [routerLink]="['/technologies', technologies[i+2].name]">
+                      <img *ngFor="let subtech of technologies[i+2].subtech" class="border rounded-circle" [src]="subtech.src" width="20px" height="20px"
+                      />
+                    </td>
+                    <td *ngIf="technologies[i+3]" [routerLink]="['/technologies', technologies[i+3].name]">
+                      <img *ngFor="let subtech of technologies[i+3].subtech" class="border rounded-circle" [src]="subtech.src" width="20px" height="20px"
+                      />
+                    </td>
+                  </tr>
+                </ng-container>
               </ng-container>
             </table>
           </div>
@@ -76,10 +86,58 @@
   </div>
   <div class="row border">
     <div class="col-sm-12">
-      <a routerLink="/experience">Experience</a>
+      <a routerLink="/experience">
+        <h5>Experience</h5>
+      </a>
     </div>
-    <div class="col-sm-6" *ngFor="let exp of experiences">
-      <img [src]="exp.src" width="20px" height="20px" />
+    <div class="col-sm-12">
+      <!--div class="row">
+        <div class="col-sm-12">
+          <app-pie-chart [pieChartLabels]="pieLabels" [pieChartData]="pieData" ></app-pie-chart>
+        </div>
+      </div-->
+      <div class="row">
+        <div class="col-sm-12">
+          <div routerLink="/experience" class="row border" *ngFor="let exp of experiences">
+            <div class="col-sm-2">
+              <img class="rounded-circle" [src]="exp.src" width="50px" height="50px" />
+            </div>
+            <div class="col-sm-4">
+              <table>
+                <tr>
+                  <th>
+                    {{exp.company}}
+                  </th>
+                </tr>
+                <tr>
+                  <td>
+                    {{exp.profile}}
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="col-sm-4">
+              <table>
+                <tr>
+                  <th class="detail">
+                    {{exp.location}}
+                  </th>
+                </tr>
+                <tr>
+                  <td class="detail">
+                    {{toDate(exp.start) | date:dateFormat}} - {{exp.end ? (toDate(exp.end) | date:dateFormat) : "present"}}
+                  </td>
+                </tr>
+                <tr>
+                  <td class="detail">
+                    {{calculationDuration(exp.start, exp.end) | secondsToTime : 2}}
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="row">

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ChartsModule } from 'ng2-charts';
 import { AlertModule } from 'ngx-bootstrap';
 import { RouterModule, Routes } from '@angular/router';
 import { ClickOutsideModule } from 'ng-click-outside';
@@ -11,6 +12,8 @@ import { TechnologiesComponent } from './technologies/technologies.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { ProjectComponent } from './project/project.component';
 import { MatExpansionModule } from '@angular/material';
+import { SecondsToTimePipe } from './pipe/seconds-to-time.pipe';
+import { PieChartComponent } from './charts/pie-chart/pie-chart.component';
 const routesMap: Routes = [
   { path: 'summary', component: SummaryComponent },
   { path: 'technologies/:name', component: TechnologiesComponent },
@@ -27,7 +30,9 @@ const routesMap: Routes = [
     SummaryComponent,
     TechnologiesComponent,
     ExperienceComponent,
-    ProjectComponent
+    ProjectComponent,
+    SecondsToTimePipe,
+    PieChartComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +40,7 @@ const routesMap: Routes = [
     HttpModule,
     MatExpansionModule,
     BrowserAnimationsModule,
+    ChartsModule,
     AlertModule.forRoot(),
     RouterModule.forRoot(
       routesMap
